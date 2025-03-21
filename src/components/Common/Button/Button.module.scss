@@ -1,0 +1,113 @@
+@use '@/styles/variables.scss' as *;
+@use '@/styles/mixins.scss' as *;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calcVW(16);
+    line-height: 130%;
+    font-weight: 600;
+    padding: calcVW(18) calcVW(31);
+    font-family: $font-f-poppins;
+    transition: background-color 0.3s, color 0.3s ease-out;
+
+    @media (max-width: 1440px) {
+        font-size: 16px;
+        padding: 18px 31px;
+    }
+}
+
+.filled.dark {
+    background-color: #141416;
+    color: #ffffff;
+    border: none;
+}
+
+.filled.dark:hover {
+    background-color: #222222;
+}
+
+.filled.light {
+    background-color: #ffffff;
+    color: #141416;
+    border: none;
+}
+
+.filled.light:hover {
+    background-color: #F2F2F2;
+}
+
+.outlined.dark {
+    background: none;
+    color: #000000;
+    border: calcVW(2) solid #000000;
+
+    @media (max-width: 1440px) {
+        border: 2px solid #000000;
+    }
+}
+
+.outlined.dark:hover {
+    background-color: #D7D7D7;
+}
+
+.outlined.light {
+    background: none;
+    color: #ffffff;
+    border: calcVW(2) solid #ffffff;
+
+    @media (max-width: 1440px) {
+        border: 2px solid #ffffff;
+    }
+}
+
+.outlined.light:hover {
+    background-color: #D7D7D7;
+    color: #1A1A1A;
+}
+
+.small {
+    font-size: calcVW(14);
+    line-height: 150%;
+    font-weight: 600;
+    padding: calcVW(14) calcVW(24);
+    border-radius: 12px;
+
+    @media (max-width: 1440px) {
+        font-size: 14px;
+        padding: 14px 24px;
+    }
+}
+
+.medium {
+    font-size: calcVW(16);
+    line-height: calcVW(22);
+    font-weight: 600;
+    padding: calcVW(16) calcVW(25);
+    border-radius: 16px;
+    font-family: $font-f-inter;
+
+    @media (max-width: 1440px) {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 25px;
+    }
+}
+
+.large {
+    font-size: calcVW(16);
+    line-height: 130%;
+    font-weight: 600;
+    padding: calcVW(18) calcVW(31);
+    border-radius: 12px;
+
+    @media (max-width: 1440px) {
+        font-size: 16px;
+        padding: 18px 31px;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

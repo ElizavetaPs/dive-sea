@@ -1,0 +1,21 @@
+@use '@/styles/variables.scss' as *;
+@use '@/styles/mixins.scss' as *;
+
+.wrapper {
+    width: fit-content;
+    background-color: rgba(28, 29, 32, 0.35);
+    color: #ffffff;
+    font-size: calcVW(14);
+    line-height: 100%;
+    font-family: $font-f-poppins;
+    font-weight: 500;
+    border-radius: 10px;
+    border:  calcVW(1) solid rgba(28, 29, 32, 0.08);
+    padding: calcVW(10) calcVW(14);
+
+    @media (max-width: 1440px) {
+        font-size: 14px;
+        padding: 10px 14px;
+        border: 1px solid rgba(28, 29, 32, 0.08);
+    }
+}

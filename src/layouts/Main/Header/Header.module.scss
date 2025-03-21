@@ -1,0 +1,62 @@
+@use '@/styles/variables.scss' as *;
+@use '@/styles/mixins.scss' as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: calcVW(45) 0 calcVW(17);
+    z-index: 10;
+    transition: background-color 0.4s ease-out, padding 0.4s ease-out;
+
+    @media (max-width: 1440px) {
+        padding: 45px 0 17px;
+    }
+}
+
+.header.scrolled {
+    padding: calcVW(17) 0;
+    background-color: rgb(255, 255, 255);
+
+    @media (max-width: 1440px) {
+        padding: 17px 0;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: calcVW(66);
+
+    @media (max-width: 1440px) {
+        column-gap: 66px;
+    }
+}
+
+.nav {
+    display: flex;
+    column-gap: calcVW(50);
+
+    @media (max-width: 1440px) {
+        column-gap: 50px;
+    }
+}
+
+.navItem {
+    text-transform: uppercase;
+    font-size: calcVW(18);
+    color: #606060;
+    transition: color 0.2s ease-out;
+
+    @media (max-width: 1440px) {
+        font-size: 18px;
+    }
+}
+
+.navItem:hover {
+    color: #141416;
+}

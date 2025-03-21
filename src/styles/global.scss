@@ -1,0 +1,34 @@
+@import './variables.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+	font-family: $font-f-inter;
+    background-color: #ffffff;
+	color: #000000;
+	font-style: normal;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
