@@ -2,6 +2,7 @@
 @use '@/styles/mixins.scss' as *;
 
 .container {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr calcVW(369);
     column-gap: calcVW(24);
@@ -26,6 +27,13 @@
         margin: 90px 0;
         border-radius: 22px;
     }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        padding: 22px 30px 88px;
+        row-gap: 40px;
+        margin: 70px 0 250px;
+    }
 }
 
 .content {
@@ -36,6 +44,11 @@
     @media (max-width: 1440px) {
         row-gap: 57px;
     }
+
+    @media (max-width: 768px) {
+        align-items: center;
+        row-gap: 22px;
+    }
 }
 
 .textBox {
@@ -45,6 +58,12 @@
 
     @media (max-width: 1440px) {
         row-gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+        align-items: center;
+        text-align: center;
+        row-gap: 9px;
     }
 
     p {
@@ -81,6 +100,11 @@
         font-size: 33px;
         line-height: 36px;
     }
+
+    @media (max-width: 768px) {
+        font-size: 24px;
+        line-height: 24px;
+    }
 }
 
 .img {
@@ -95,6 +119,19 @@
 
     @media (max-width: 1024px) {
         border-radius: 12px;
+    }
+
+    @media (max-width: 768px) {
+        position: absolute;
+        width: calc(100% - 64px);
+        top: calc(100% - 47px);
+        left: 32px;
+        right: 32px;
+        height: 200px;
+    }
+
+    @media (max-width: 480px) {
+        height: 130px;
     }
 }
 

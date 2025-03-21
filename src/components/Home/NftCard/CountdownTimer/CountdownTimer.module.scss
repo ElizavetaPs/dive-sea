@@ -3,6 +3,7 @@
 
 .wrapper {
     width: fit-content;
+    min-width: calcVW(122);
     background-color: rgba(28, 29, 32, 0.35);
     color: #ffffff;
     font-size: calcVW(14);
@@ -14,9 +15,17 @@
     padding: calcVW(10) calcVW(14);
 
     @media (max-width: 1440px) {
+        min-width: 122px;
         font-size: 14px;
         padding: 10px 14px;
         border: 1px solid rgba(28, 29, 32, 0.08);
         border-radius: 10px;
+    }
+
+    @media (max-width: 1024px) {
+        min-width: 88px;
+        font-size: 10px;
+        padding: 7px 10px;
+        border-radius: 7px;
     }
 }

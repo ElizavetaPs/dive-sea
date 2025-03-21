@@ -35,8 +35,8 @@ export const Slider = () => {
                     nextEl: nextRef.current,
                     prevEl: prevRef.current,
                 }}
-                slidesPerGroup={3}
-                speed={1200}
+                slidesPerGroup={1}
+                speed={600}
                 slidesPerView="auto"
                 loop={true}
                 centeredSlides={true}
@@ -46,6 +46,8 @@ export const Slider = () => {
                 breakpoints={{
                     1024: {
                         spaceBetween: 40,
+                        slidesPerGroup: 3,
+                        speed: 1000,
                     },
                 }}
             >

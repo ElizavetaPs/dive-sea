@@ -13,6 +13,12 @@ export const Footer = () => {
             <Container>
                 <div className={styles.top}>
                     <div className={styles.logo} />
+                    <div className={styles.socials}>
+                        <a href="#" className={styles.social}><InstSvg /></a>
+                        <a href="#" className={styles.social}><LinkedinSvg /></a>
+                        <a href="#" className={styles.social}><FacebookSvg /></a>
+                        <a href="#" className={styles.social}><TwitterSvg /></a>
+                    </div>
                     <nav className={styles.nav}>
                         <Link href="#">Privacy Policy</Link>
                         <Link href="#">Term & Conditions</Link>
@@ -21,7 +27,10 @@ export const Footer = () => {
                     </nav>
                 </div>
                 <div className={styles.bottom}>
-                    <span>© 2023</span>
+                    <div className={styles.copyright}>
+                        <span className={styles.short}>© 2023</span>
+                        <span className={styles.full}>© 2023 DiveSea All Rights Reserved.</span>
+                    </div>
                     <div className={styles.socials}>
                         <a href="#" className={styles.social}><InstSvg /></a>
                         <a href="#" className={styles.social}><LinkedinSvg /></a>

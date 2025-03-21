@@ -15,15 +15,18 @@ export const Intro = () => {
             <Container className={styles.container}>
                 <div className={styles.content}>
                     <div className={styles.text}>
-                        <motion.h1 
-                            className={styles.title}
+                        <motion.div 
+                            className={styles.titleBox}
                             variants={variants}
                             initial="initial"
                             animate="animate"
                             transition={{ ease: 'easeOut', duration: 0.6, delay: 0.2 }}
                         >
-                            Discover And Create NFTs
-                        </motion.h1>
+                            <div className={styles.overline}>
+                                <span>OVER 1M CREATORS</span>
+                            </div>
+                            <h1 className={styles.title}>Discover And Create NFTs</h1>
+                        </motion.div>
                         <motion.div
                             variants={variants}
                             initial="initial"

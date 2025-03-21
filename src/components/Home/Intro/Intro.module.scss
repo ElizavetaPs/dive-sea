@@ -18,17 +18,35 @@
         padding-top: 152px;
         padding-bottom: 114px;
     }
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        row-gap: 105px;
+        padding-top: 72px;
+    }
 }
 
 .container {
     display: grid;
     grid-template-columns: calcVW(567);
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .content {
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 768px) {
+        max-width: 567px;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
 }
 
 .text {
@@ -42,6 +60,10 @@
 
     @media (max-width: 1024px) {
         row-gap: 15px;
+    }
+
+    @media (max-width: 768px) {
+        align-items: center;
     }
 
     p {
@@ -67,6 +89,66 @@
     color: #141416;
 }
 
+.titleBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: calcVW(10);
+
+    @media (max-width: 1440px) {
+        row-gap: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        row-gap: 8px;
+        align-items: center;
+    }
+}
+
+.overline {
+    position: relative;
+    width: fit-content;
+    opacity: 0.2;
+
+    @media (max-width: 768px) {
+        padding-left: 41px;
+        opacity: 0.5;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: calcVW(195);
+        height: calcVW(1);
+        background-color: #201F1F;
+
+        @media (max-width: 1440px) {
+            width: 195px;
+            height: 1px;
+        }
+
+        @media (max-width: 768px) {
+            top: calc(50% + 1px);
+            width: 33px;
+        }
+    }
+
+    span {
+        display: none;
+        color: #201F1F;
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        @media (max-width: 768px) {
+            display: inline;
+        }
+    }
+}
+
 .title {
     position: relative;
     font-size: calcVW(76);
@@ -85,20 +167,9 @@
         line-height: 62px;
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: calcVW(-10);
-        left: 0;
-        width: calcVW(195);
-        height: calcVW(1);
-        background-color: #CECDCD;
-
-        @media (max-width: 1440px) {
-            top: -10px;
-            width: 195px;
-            height: 1px;
-        }
+    @media (max-width: 768px) {
+        font-size: 48px;
+        line-height: 54px;
     }
 }
 
@@ -116,6 +187,10 @@
         column-gap: 16px;
         margin-top: 36px;
     }
+
+    @media (max-width: 768px) {
+        margin-top: 41px;
+    }
 }
 
 .stat {
@@ -131,6 +206,10 @@
     @media (max-width: 1024px) {
         column-gap: 40px;
         margin-top: 58px;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
     }
 }
 
@@ -185,6 +264,15 @@
     @media (max-width: 1440px) {
         top: 200px;
     }
+
+    @media (max-width: 768px) {
+        height: calcVW(290, 375);
+        position: relative;
+        column-gap: calcVW(19, 375);
+        top: 0;
+        transform: none;
+        padding-left: 30px;
+    }
     
     &::before {
         content: '';
@@ -197,6 +285,11 @@
         background-image: url('~@/assets/svg/dots.svg');
         background-size: contain;
         background-position: center;
+
+        @media (max-width: 768px) {
+            width: calcVW(93, 375);
+            height: calcVW(213, 375);
+        }
     }
 }
 
@@ -210,9 +303,19 @@
     z-index: 1;
     margin-top: calcVW(48);
 
+    @media (max-width: 768px) {
+        width: calcVW(210, 375);
+        height: calcVW(210, 375);
+    }
+
     img {
         width: calcVW(559);
         height: calcVW(563);
+
+        @media (max-width: 768px) {
+            width: calcVW(300, 375);
+            height: calcVW(303, 375);
+        }
     }
 }
 
@@ -226,10 +329,20 @@
     margin-top: auto;
     z-index: 1;
 
+    @media (max-width: 768px) {
+        width: calcVW(170, 375);
+        height: calcVW(170, 375);
+    }
+
     img {
         width: calcVW(451);
         height: calcVW(454);
         background-position: center;
+
+        @media (max-width: 768px) {
+            width: calcVW(244, 375);
+            height: calcVW(246, 375);
+        }
     }
 }
 
@@ -242,4 +355,11 @@
     background-image: url('~@/assets/svg/curly-arrow.svg');
     background-size: contain;
     background-position: center;
+
+    @media (max-width: 768px) {
+        top: calcVW(20, 375);
+        left: calcVW(245, 375);
+        width: calcVW(58, 375);
+        height: calcVW(56, 375);
+    }
 }
