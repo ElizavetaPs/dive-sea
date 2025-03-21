@@ -125,3 +125,18 @@
         font-size: 12px;
     }
 }
+
+.amountIcon {
+    width: calcVW(22);
+    height: calcVW(22);
+
+    @media (max-width: 1440px) {
+        width: 22px;
+        height: 22px;
+    }
+
+    @media (max-width: 1024px) {
+        width: 16px;
+        height: 16px;
+    }
+}

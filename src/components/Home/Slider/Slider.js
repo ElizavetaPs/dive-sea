@@ -59,10 +59,14 @@ export const Slider = () => {
             </Swiper>
             <div className={styles.nav}>
                 <button ref={prevRef} className={cn(styles.navBtn, styles.btnPrev)}>
-                    <ArrowLeftSvg />
+                    <div className={styles.navArrow}>
+                        <ArrowLeftSvg />
+                    </div>
                 </button>
                 <button ref={nextRef} className={cn(styles.navBtn, styles.btnNext)}>
-                    <ArrowRightSvg />
+                    <div className={styles.navArrow}>
+                        <ArrowRightSvg />
+                    </div>
                 </button>
             </div>
         </div>

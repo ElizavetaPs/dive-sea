@@ -130,3 +130,18 @@
         }
     }
 }
+
+.navArrow {
+    width: calcVW(24);
+    height: calcVW(24);
+
+    @media (max-width: 1440px) {
+        width: 24px;
+        height: 24px;
+    }
+
+    @media (max-width: 1024px) {
+        width: 18px;
+        height: 18px;
+    }
+}

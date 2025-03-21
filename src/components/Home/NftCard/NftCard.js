@@ -29,7 +29,9 @@ export const NftCard = ({ content }) => {
                 <div className={styles.bid}>
                     <span>Current bid</span>
                     <div className={styles.amount}>
-                        <EthereumSvg />
+                        <div className={styles.amountIcon}>
+                            <EthereumSvg />
+                        </div>
                         <span>{randomBidAmount}</span>
                     </div>
                 </div>
