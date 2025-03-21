@@ -22,7 +22,7 @@ export const Intro = () => {
                             animate="animate"
                             transition={{ ease: 'easeOut', duration: 0.6, delay: 0.2 }}
                         >
-                            Discover And Create NFTs
+                            111 Discover And Create NFTs
                         </motion.h1>
                         <motion.div
                             variants={variants}
