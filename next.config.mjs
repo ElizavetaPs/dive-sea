@@ -6,6 +6,7 @@ export default (phase) => {
 	/** @type {import('next').NextConfig} */
 	
 	const nextConfig = {
+		basePath: isDev ? undefined : '/dive-sea',
 		assetPrefix: isDev ? undefined : '/dive-sea',
 		webpack: (config) => {
 			config.module.rules.push({
