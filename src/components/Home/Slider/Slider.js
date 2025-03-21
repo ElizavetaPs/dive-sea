@@ -13,6 +13,7 @@ import { nfts } from './content';
 
 
 export const Slider = () => {
+    const swiperRef = useRef(null);
     const prevRef = useRef(null);
     const nextRef = useRef(null);
     const [refsReady, setRefsReady] = useState(false);
@@ -27,6 +28,7 @@ export const Slider = () => {
         <div className={styles.wrapper}>
             <h2 className={styles.title}>Weekly - Top NFT</h2>
             <Swiper
+                ref={swiperRef}
                 className={styles.slider}
                 modules={[Navigation]}
                 navigation={{
@@ -39,9 +41,13 @@ export const Slider = () => {
                 loop={true}
                 centeredSlides={true}
                 followFinger={false}
-                spaceBetween={40}
-                autoHeight={true}
+                spaceBetween={32}
                 wrapperClass={styles.sliderWrapper}
+                breakpoints={{
+                    1024: {
+                        spaceBetween: 40,
+                    },
+                }}
             >
                 {
                     nfts.map((content, i) => (

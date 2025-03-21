@@ -13,6 +13,11 @@
         padding-top: 200px;
         padding-bottom: 170px;
     }
+
+    @media (max-width: 1024px) {
+        padding-top: 152px;
+        padding-bottom: 114px;
+    }
 }
 
 .container {
@@ -35,6 +40,10 @@
         row-gap: 28px;
     }
 
+    @media (max-width: 1024px) {
+        row-gap: 15px;
+    }
+
     p {
         font-size: calcVW(18);
         line-height: calcVW(28);
@@ -44,6 +53,11 @@
         @media (max-width: 1440px) {
             font-size: 18px;
             line-height: 28px;
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 13px;
+            line-height: 18px;
         }
     }
 }
@@ -64,6 +78,11 @@
     @media (max-width: 1440px) {
         font-size: 76px;
         line-height: 84px;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 54px;
+        line-height: 62px;
     }
 
     &::before {
@@ -92,6 +111,11 @@
         column-gap: 22px;
         margin-top: 44px;
     }
+
+    @media (max-width: 1024px) {
+        column-gap: 16px;
+        margin-top: 36px;
+    }
 }
 
 .stat {
@@ -102,6 +126,11 @@
     @media (max-width: 1440px) {
         column-gap: 60px;
         margin-top: 80px;
+    }
+
+    @media (max-width: 1024px) {
+        column-gap: 40px;
+        margin-top: 58px;
     }
 }
 
@@ -118,6 +147,12 @@
         font-size: 12px;
         line-height: 16px;
     }
+
+    @media (max-width: 1024px) {
+        row-gap: 8px;
+        font-size: 9px;
+        line-height: 13px;
+    }
 }
 
 .statValue {
@@ -129,6 +164,11 @@
     @media (max-width: 1440px) {
         font-size: 36px;
         line-height: 42px;
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 26px;
+        line-height: 30px;
     }
 }
 

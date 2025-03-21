@@ -5,7 +5,6 @@ import Link from 'next/link';
 import cn from 'classnames';
 import { Container } from '@/components/Common/Container/Container';
 import { Button } from '@/components/Common/Button/Button';
-import LogoSvg from '@/assets/svg/logo-header.svg';
 import styles from './Header.module.scss';
 
 
@@ -35,7 +34,7 @@ export const Header = () => {
 			[styles.scrolled]: isScrolled,
 		})}>
             <Container className={styles.container}>
-                <LogoSvg />
+                <div className={styles.logo} />
                 <nav className={styles.nav}>
                     <Link href="#" className={styles.navItem}>Discover</Link>
                     <Link href="#" className={styles.navItem}>Creators</Link>

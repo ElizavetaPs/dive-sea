@@ -9,7 +9,7 @@
     line-height: 100%;
     font-family: $font-f-poppins;
     font-weight: 500;
-    border-radius: 10px;
+    border-radius: calcVW(10);
     border:  calcVW(1) solid rgba(28, 29, 32, 0.08);
     padding: calcVW(10) calcVW(14);
 
@@ -17,5 +17,6 @@
         font-size: 14px;
         padding: 10px 14px;
         border: 1px solid rgba(28, 29, 32, 0.08);
+        border-radius: 10px;
     }
 }
