@@ -194,7 +194,7 @@
         width: calcVW(173);
         height: calcVW(400);
         z-index: 0;
-        background-image: url('/dots.svg');
+        background-image: url('~@/assets/svg/dots.svg');
         background-size: contain;
         background-position: center;
     }
@@ -239,7 +239,7 @@
     left: calcVW(413);
     width: calcVW(128);
     height: calcVW(124);
-    background-image: url('/curly-arrow.svg');
+    background-image: url('~@/assets/svg/curly-arrow.svg');
     background-size: contain;
     background-position: center;
 }
