@@ -1,22 +1,17 @@
-import { PHASE_DEVELOPMENT_SERVER } from 'next/constants.js';
+/** @type {import('next').NextConfig} */
 
-export default (phase) => {
-	const isDev = phase === PHASE_DEVELOPMENT_SERVER;
-  
-	/** @type {import('next').NextConfig} */
+const nextConfig = {
+	output: 'export',
+	basePath: process.env.NODE_ENV === 'production' ? '/dive-sea' : '',
+  	assetPrefix: process.env.NODE_ENV === 'production' ? '/dive-sea' : '',
+	webpack(config) {
+		config.module.rules.push({
+			test: /\.svg$/,
+			use: ['@svgr/webpack'],
+		});
 	
-	const nextConfig = {
-		basePath: isDev ? undefined : '/dive-sea',
-		assetPrefix: isDev ? undefined : '/dive-sea',
-		webpack: (config) => {
-			config.module.rules.push({
-				test: /\.svg$/,
-				use: ['@svgr/webpack'],
-			})
-
-			return config;
-		}
-	};
-
-	return nextConfig;
-};
+		return config;
+	},
+  };
+  
+  export default nextConfig;
